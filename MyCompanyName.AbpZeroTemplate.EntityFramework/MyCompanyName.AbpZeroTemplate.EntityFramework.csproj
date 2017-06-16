@@ -380,6 +380,10 @@
     <Compile Include="Migrations\201611301416047_Upgrated_To_Abp_And_Module_Zero_1_1.Designer.cs">
       <DependentUpon>201611301416047_Upgrated_To_Abp_And_Module_Zero_1_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706160940081_InitialCreate1.cs" />
+    <Compile Include="Migrations\201706160940081_InitialCreate1.Designer.cs">
+      <DependentUpon>201706160940081_InitialCreate1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="AbpZeroTemplateDataModule.cs" />
     <Compile Include="Migrations\Seed\Host\DefaultEditionCreator.cs" />
@@ -572,6 +576,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611301416047_Upgrated_To_Abp_And_Module_Zero_1_1.resx">
       <DependentUpon>201611301416047_Upgrated_To_Abp_And_Module_Zero_1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706160940081_InitialCreate1.resx">
+      <DependentUpon>201706160940081_InitialCreate1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
