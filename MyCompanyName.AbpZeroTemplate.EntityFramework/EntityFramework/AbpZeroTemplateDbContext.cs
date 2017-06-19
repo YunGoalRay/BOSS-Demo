@@ -8,6 +8,7 @@ using MyCompanyName.AbpZeroTemplate.Friendships;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy;
 using MyCompanyName.AbpZeroTemplate.Storage;
 using MyCompanyName.AbpZeroTemplate.Products;
+using MyCompanyName.AbpZeroTemplate.Products.EntityMapper.Products;
 
 namespace MyCompanyName.AbpZeroTemplate.EntityFramework
 {
@@ -53,6 +54,12 @@ namespace MyCompanyName.AbpZeroTemplate.EntityFramework
             : base(existingConnection, contextOwnsConnection)
         {
 
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new ProductCfg());
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

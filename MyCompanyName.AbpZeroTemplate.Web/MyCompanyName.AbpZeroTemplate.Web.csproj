@@ -3133,21 +3133,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\AbpZeroTemplateWebViewPageBase.cs" />
     <Compile Include="Views\UrlChecker.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\Dtos\CreateOrUpdateProductInput.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\Dtos\GetProductForEditOutput.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\Dtos\GetProductInput.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\Dtos\ProductEditDto.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\Dtos\ProductListDto.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\Exporting\IProductListExcelExporter.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\Exporting\ProductListExcelExporter.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\IProductAppService.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\Mappers\ProductDtoMapper.cs" />
-    <Compile Include="_GeneratedCode\Products\Application\Products\ProductAppService.cs" />
-    <Compile Include="_GeneratedCode\Products\Core\Products\Authorization\ProductAppAuthorizationProvider.cs" />
-    <Compile Include="_GeneratedCode\Products\Core\Products\Authorization\ProductAppPermissions.cs" />
-    <Compile Include="_GeneratedCode\Products\Core\Products\ProductManage.cs" />
-    <Compile Include="_GeneratedCode\Products\Core\Products\____ProductReadme.cs" />
-    <Compile Include="_GeneratedCode\Products\EntityFramework\EntityMapper\Products\ProductCfg.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

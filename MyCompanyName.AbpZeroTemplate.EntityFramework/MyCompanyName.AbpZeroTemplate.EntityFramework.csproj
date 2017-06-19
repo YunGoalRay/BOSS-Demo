@@ -144,6 +144,7 @@
     <Compile Include="EntityFramework\AbpZeroTemplateDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\AbpZeroTemplateRepositoryBase.cs" />
     <Compile Include="EntityFramework\AbpZeroDbMigrator.cs" />
+    <Compile Include="EntityMapper\Products\ProductCfg.cs" />
     <Compile Include="Migrations\201501041229232_InitialCreate.cs" />
     <Compile Include="Migrations\201501041229232_InitialCreate.Designer.cs">
       <DependentUpon>201501041229232_InitialCreate.cs</DependentUpon>
@@ -380,9 +381,9 @@
     <Compile Include="Migrations\201611301416047_Upgrated_To_Abp_And_Module_Zero_1_1.Designer.cs">
       <DependentUpon>201611301416047_Upgrated_To_Abp_And_Module_Zero_1_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706160940081_InitialCreate1.cs" />
-    <Compile Include="Migrations\201706160940081_InitialCreate1.Designer.cs">
-      <DependentUpon>201706160940081_InitialCreate1.cs</DependentUpon>
+    <Compile Include="Migrations\201706190416392_Add_Product_Table.cs" />
+    <Compile Include="Migrations\201706190416392_Add_Product_Table.Designer.cs">
+      <DependentUpon>201706190416392_Add_Product_Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="AbpZeroTemplateDataModule.cs" />
@@ -577,8 +578,8 @@
     <EmbeddedResource Include="Migrations\201611301416047_Upgrated_To_Abp_And_Module_Zero_1_1.resx">
       <DependentUpon>201611301416047_Upgrated_To_Abp_And_Module_Zero_1_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706160940081_InitialCreate1.resx">
-      <DependentUpon>201706160940081_InitialCreate1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706190416392_Add_Product_Table.resx">
+      <DependentUpon>201706190416392_Add_Product_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,7 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
 using MyCompanyName.AbpZeroTemplate.Authorization;
+using MyCompanyName.AbpZeroTemplate.Products.Authorization;
 using MyCompanyName.AbpZeroTemplate.Web.Navigation;
 
 namespace MyCompanyName.AbpZeroTemplate.Web.App.Startup
@@ -17,6 +18,13 @@ namespace MyCompanyName.AbpZeroTemplate.Web.App.Startup
         {
             context.Manager.MainMenu
                 .AddItem(new MenuItemDefinition(
+                    PageNames.App.Tenant.Dashboard,
+                    L("Dashboard"),
+                    url: "tenant.dashboard",
+                    icon: "icon-home",
+                    requiredPermissionName: AppPermissions.Pages_Tenant_Dashboard
+                    )
+                ).AddItem(new MenuItemDefinition(
                     PageNames.App.Host.BasicData,
                     L("BasicData"),
                     icon: "icon-globe"
@@ -24,8 +32,8 @@ namespace MyCompanyName.AbpZeroTemplate.Web.App.Startup
                         PageNames.App.BasicData.Product,
                         L("BasicData_Product"),
                         url: "",
-                        icon: "icon-layers",
-                        requiredPermissionName: AppPermissions.Pages_Administration_OrganizationUnits
+                        icon: "icon-grid",
+                        requiredPermissionName: ProductAppPermissions.Product
                         )
                     ).AddItem(new MenuItemDefinition(
                         PageNames.App.BasicData.Client,
@@ -123,13 +131,6 @@ namespace MyCompanyName.AbpZeroTemplate.Web.App.Startup
                     url: "host.editions",
                     icon: "icon-grid",
                     requiredPermissionName: AppPermissions.Pages_Editions
-                    )
-                ).AddItem(new MenuItemDefinition(
-                    PageNames.App.Tenant.Dashboard,
-                    L("Dashboard"),
-                    url: "tenant.dashboard",
-                    icon: "icon-home",
-                    requiredPermissionName: AppPermissions.Pages_Tenant_Dashboard
                     )
                 ).AddItem(new MenuItemDefinition(
                     PageNames.App.Common.Administration,

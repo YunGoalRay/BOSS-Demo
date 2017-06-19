@@ -1,49 +1,68 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 using MyCompanyName.AbpZeroTemplate.Dto;
-using System;
+using MyCompanyName.AbpZeroTemplate.Products.Dtos;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MyCompanyName.AbpZeroTemplate.Products
 {
+    /// <summary>
+    /// 基础数据产品信息服务接口
+    /// </summary>
     public interface IProductAppService : IApplicationService
     {
-        /// <summary>
-        /// 根据查询条件获取产品分页列表
-        /// </summary>
-        Task<PagedResultOutput<ProductListDto>> GetProductList(GetProductQueryInput input);
+        #region 基础数据产品信息管理
 
         /// <summary>
-        /// 获取指定id的产品信息
+        /// 根据查询条件获取基础数据产品信息分页列表
         /// </summary>
-        Task<ProductDto> GetProduct(IdInput input);
+        Task<PagedResultDto<ProductListDto>> GetPagedProductsAsync(GetProductInput input);
 
         /// <summary>
-        /// 新增或更改产品
+        /// 通过Id获取基础数据产品信息信息进行编辑或修改 
         /// </summary>
-        Task CreateOrUpdateProduct(ProductDto input);
+        Task<GetProductForEditOutput> GetProductForEditAsync(ProductEditDto input);
+
+		  /// <summary>
+        /// 通过指定id获取基础数据产品信息ListDto信息
+        /// </summary>
+		Task<ProductListDto> GetProductByIdAsync(EntityDto<string> input);
 
         /// <summary>
-        /// 新增产品
+        /// 新增或更改基础数据产品信息
         /// </summary>
-        Task<ProductDto> CreateProduct(ProductDto input);
+        Task CreateOrUpdateProductAsync(CreateOrUpdateProductInput input);
 
         /// <summary>
-        /// 更新产品
+        /// 新增基础数据产品信息
         /// </summary>
-        Task UpdateProduct(ProductDto input);
+        Task<ProductEditDto> CreateProductAsync(ProductEditDto input);
 
         /// <summary>
-        /// 删除产品
+        /// 更新基础数据产品信息
         /// </summary>
-        Task DeleteProduct(IdInput input);
+        Task UpdateProductAsync(ProductEditDto input);
 
         /// <summary>
-        /// 导出到表格
+        /// 删除基础数据产品信息
+        /// </summary>
+        Task DeleteProductAsync(EntityDto<string> input);
+
+        /// <summary>
+        /// 批量删除基础数据产品信息
+        /// </summary>
+        Task BatchDeleteProductAsync(List<string> input);
+
+        #endregion
+
+        #region Excel导出功能
+         /// <summary>
+        /// 获取基础数据产品信息信息转换为Excel
         /// </summary>
         /// <returns></returns>
-        Task<FileDto> GetProductsToExcel();
+        Task<FileDto> GetProductToExcel();
+
+        #endregion
     }
 }

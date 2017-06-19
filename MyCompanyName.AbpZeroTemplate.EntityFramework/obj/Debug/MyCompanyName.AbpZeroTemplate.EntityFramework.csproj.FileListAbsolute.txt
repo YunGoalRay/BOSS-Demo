@@ -120,4 +120,4 @@ D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.Abp
 D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.EntityFramework.csproj.GenerateResource.Cache
 D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.EntityFramework.dll
 D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.EntityFramework.pdb
-D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.Migrations.InitialCreate1.resources
+D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.Migrations.Add_Product_Table.resources

@@ -3,12 +3,28 @@
   <texts>
     <text name="HomePage" value="主页" />
     <text name="AboutUs" value="关于我们" />
+    <!--公共不能为空-->
+    <text name="MustBe_Required" value="不能为空" />
     
     <!--自定义菜单-->
     <text name="BasicData" value="基础数据" />
     <text name="BasicData_Product" value="产品" />
     <text name="BasicData_Client" value="客户" />
     <text name="BasicData_Provider" value="供应商" />
+
+    <!-- 基础数据产品信息管理 -->
+    <text name="Product" value="基础数据产品信息" />
+    <text name="ProductHeaderInfo" value="基础数据产品信息管理列表" />
+    <text name="CreateProduct" value="新增基础数据产品信息" />
+    <text name="EditProduct" value="编辑基础数据产品信息" />
+    <text name="DeleteProduct" value="删除基础数据产品信息" />
+    <text name="ProductDeleteWarningMessage" value="基础数据产品信息名称: {0} 将被删除,是否确定删除它。" />
+    <!--//用于表格展示的数据信息的标题-->
+    <text name="ProductName" value="产品名称" />
+    <text name="Classify" value="产品分类" />
+    <text name="Comment" value="备注" />
+    <text name="BusinessCategory" value="业务大类" />
+    <text name="BusinessType" value="业务类型" />
 
     <text name="SalesManagement" value="销售管理" />
     <text name="SalesManagement_SalesOff" value="销售关帐" />

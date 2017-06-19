@@ -287,7 +287,16 @@
     <Compile Include="Organizations\Dto\MoveOrganizationUnitInput.cs" />
     <Compile Include="Organizations\OrganizationUnitAppService.cs" />
     <Compile Include="Organizations\Dto\OrganizationUnitUserListDto.cs" />
+    <Compile Include="Products\Dtos\CreateOrUpdateProductInput.cs" />
+    <Compile Include="Products\Dtos\GetProductForEditOutput.cs" />
+    <Compile Include="Products\Dtos\GetProductInput.cs" />
+    <Compile Include="Products\Dtos\ProductEditDto.cs" />
+    <Compile Include="Products\Dtos\ProductListDto.cs" />
+    <Compile Include="Products\Exporting\IProductListExcelExporter.cs" />
+    <Compile Include="Products\Exporting\ProductListExcelExporter.cs" />
     <Compile Include="Products\IProductAppService.cs" />
+    <Compile Include="Products\Mappers\ProductDtoMapper.cs" />
+    <Compile Include="Products\ProductAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sessions\Dto\GetCurrentLoginInformationsOutput.cs" />
     <Compile Include="Sessions\Dto\TenantLoginInfoDto.cs" />
@@ -316,9 +325,7 @@
       <Name>MyCompanyName.AbpZeroTemplate.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Products\Dto\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
