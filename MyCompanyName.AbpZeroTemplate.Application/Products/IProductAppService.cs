@@ -1,6 +1,5 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using MyCompanyName.AbpZeroTemplate.Dto;
 using MyCompanyName.AbpZeroTemplate.Products.Dtos;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -22,12 +21,14 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         /// <summary>
         /// 通过Id获取基础数据产品信息信息进行编辑或修改 
         /// </summary>
-        Task<GetProductForEditOutput> GetProductForEditAsync(ProductEditDto input);
+        Task<GetProductForEditOutput> GetProductForEditAsync(NullableIdDto<int> input);
 
-		  /// <summary>
+        /// <summary>
         /// 通过指定id获取基础数据产品信息ListDto信息
         /// </summary>
-		Task<ProductListDto> GetProductByIdAsync(EntityDto<string> input);
+        Task<ProductListDto> GetProductByIdAsync(EntityDto<int> input);
+
+
 
         /// <summary>
         /// 新增或更改基础数据产品信息
@@ -47,21 +48,12 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         /// <summary>
         /// 删除基础数据产品信息
         /// </summary>
-        Task DeleteProductAsync(EntityDto<string> input);
+        Task DeleteProductAsync(EntityDto<int> input);
 
         /// <summary>
         /// 批量删除基础数据产品信息
         /// </summary>
-        Task BatchDeleteProductAsync(List<string> input);
-
-        #endregion
-
-        #region Excel导出功能
-         /// <summary>
-        /// 获取基础数据产品信息信息转换为Excel
-        /// </summary>
-        /// <returns></returns>
-        Task<FileDto> GetProductToExcel();
+        Task BatchDeleteProductAsync(List<int> input);
 
         #endregion
     }

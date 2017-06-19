@@ -1,32 +1,16 @@
-﻿                                                                    
-     
-        
-// 项目展示地址:"http://www.ddxc.org/"
- // 如果你有什么好的建议或者觉得可以加什么功能，请加QQ群：104390185大家交流沟通
-// 项目展示地址:"http://www.yoyocms.com/"
-//博客地址：http://www.cnblogs.com/wer-ltm/
-//代码生成器帮助文档：http://www.cnblogs.com/wer-ltm/p/5777190.html
-// <Author-作者>角落的白板笔</Author-作者>
-// Copyright © YoYoCms@中国.2017-06-16T18:32:55. All Rights Reserved.
-//<生成时间>2017-06-16T18:32:55</生成时间>
-	using System;
-    using System.Collections.Generic;
-    using System.Data.Entity;
-    using System.Linq;
-    using System.Linq.Dynamic;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Abp;
-    using Abp.Application.Services.Dto;
-    using Abp.Authorization;
-    using Abp.AutoMapper;
-    using Abp.Configuration;
-    using Abp.Domain.Repositories;
-    using Abp.Extensions;
-    using Abp.Linq.Extensions;
-    using MyCompanyName.AbpZeroTemplate.Products.Authorization;
-    using MyCompanyName.AbpZeroTemplate.Products.Dtos;
-using MyCompanyName.AbpZeroTemplate.Dto;
+﻿using Abp.Application.Services.Dto;
+using Abp.Authorization;
+using Abp.AutoMapper;
+using Abp.Domain.Repositories;
+using Abp.Linq.Extensions;
+using MyCompanyName.AbpZeroTemplate.Products.Authorization;
+using MyCompanyName.AbpZeroTemplate.Products.Dtos;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Linq.Dynamic;
+using System.Threading.Tasks;
 
 namespace MyCompanyName.AbpZeroTemplate.Products
 {
@@ -34,23 +18,23 @@ namespace MyCompanyName.AbpZeroTemplate.Products
     /// 基础数据产品信息服务实现
     /// </summary>
     [AbpAuthorize(ProductAppPermissions.Product)]
-    public class ProductAppService : AbpZeroTemplateAppServiceBase, IProductAppService
+    public class ProductAppService : AbpZeroTemplateAppServiceBase,IProductAppService
     {
-        private readonly IRepository<Product, string> _productRepository;
-        private readonly IProductListExcelExporter _productListExcelExporter;
+        private readonly IRepository<Product, int> _productRepository;
 
 
         private readonly ProductManage _productManage;
         /// <summary>
         /// 构造方法
         /// </summary>
-        public ProductAppService(IRepository<Product, string> productRepository,
-            ProductManage productManage,
-            IProductListExcelExporter productListExcelExporter)
+        public ProductAppService(IRepository<Product, int> productRepository,
+ProductManage productManage
+
+  )
         {
             _productRepository = productRepository;
             _productManage = productManage;
-            _productListExcelExporter = productListExcelExporter;
+
         }
 
         #region 基础数据产品信息管理
@@ -81,15 +65,15 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         /// <summary>
         /// 通过Id获取基础数据产品信息信息进行编辑或修改 
         /// </summary>
-        public async Task<GetProductForEditOutput> GetProductForEditAsync(ProductEditDto input)
+        public async Task<GetProductForEditOutput> GetProductForEditAsync(NullableIdDto<int> input)
         {
             var output = new GetProductForEditOutput();
 
             ProductEditDto productEditDto;
 
-            if (!string.IsNullOrWhiteSpace(input.Id))
+            if (input.Id.HasValue)
             {
-                var entity = await _productRepository.GetAsync(input.Id);
+                var entity = await _productRepository.GetAsync(input.Id.Value);
                 productEditDto = entity.MapTo<ProductEditDto>();
             }
             else
@@ -105,7 +89,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         /// <summary>
         /// 通过指定id获取基础数据产品信息ListDto信息
         /// </summary>
-        public async Task<ProductListDto> GetProductByIdAsync(EntityDto<string> input)
+        public async Task<ProductListDto> GetProductByIdAsync(EntityDto<int> input)
         {
             var entity = await _productRepository.GetAsync(input.Id);
 
@@ -123,7 +107,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         /// </summary>
         public async Task CreateOrUpdateProductAsync(CreateOrUpdateProductInput input)
         {
-            if (!string.IsNullOrWhiteSpace(input.ProductEditDto.Id))
+            if (input.ProductEditDto.Id.HasValue)
             {
                 await UpdateProductAsync(input.ProductEditDto);
             }
@@ -155,7 +139,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         {
             //TODO:更新前的逻辑判断，是否允许更新
 
-            var entity = await _productRepository.GetAsync(input.Id);
+            var entity = await _productRepository.GetAsync(input.Id.Value);
             input.MapTo(entity);
 
             await _productRepository.UpdateAsync(entity);
@@ -165,7 +149,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         /// 删除基础数据产品信息
         /// </summary>
         [AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
-        public async Task DeleteProductAsync(EntityDto<string> input)
+        public async Task DeleteProductAsync(EntityDto<int> input)
         {
             //TODO:删除前的逻辑判断，是否允许删除
             await _productRepository.DeleteAsync(input.Id);
@@ -175,7 +159,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         /// 批量删除基础数据产品信息
         /// </summary>
         [AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
-        public async Task BatchDeleteProductAsync(List<string> input)
+        public async Task BatchDeleteProductAsync(List<int> input)
         {
             //TODO:批量删除前的逻辑判断，是否允许删除
             await _productRepository.DeleteAsync(s => input.Contains(s.Id));
@@ -184,14 +168,15 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         #endregion
 
 
-        #region 基础数据产品信息的Excel导出功能
-        public async Task<FileDto> GetProductToExcel()
-        {
-            var entities = await _productRepository.GetAll().ToListAsync();
-            var dtos = entities.MapTo<List<ProductListDto>>();
-            var fileDto = _productListExcelExporter.ExportProductToFile(dtos);
-            return fileDto;
-        }
-        #endregion
+
+
+
+
+
+
+
+
+
+
     }
 }

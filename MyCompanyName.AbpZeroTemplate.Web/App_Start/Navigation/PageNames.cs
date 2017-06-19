@@ -15,6 +15,10 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Navigation
 
                 public const string Shop = "Shop";
                 public const string Category = "Category";
+
+                public const string Product = "Product";
+                public const string Client = "Client";
+                public const string Provider = "Provider";
             }
 
             public static class Host
@@ -28,13 +32,6 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Navigation
                 public const string SalesManagement = "SalesManagement";
                 public const string PurchasingManagement = "PurchasingManagement";
                 public const string BusinessReport = "BusinessReport";
-            }
-
-            public static class BasicData
-            {
-                public const string Product = "Product";
-                public const string Client = "Client";
-                public const string Provider = "Provider";
             }
 
             public static class SalesManagement

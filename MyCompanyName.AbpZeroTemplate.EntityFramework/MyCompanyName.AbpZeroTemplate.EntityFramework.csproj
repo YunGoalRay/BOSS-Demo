@@ -385,6 +385,22 @@
     <Compile Include="Migrations\201706190416392_Add_Product_Table.Designer.cs">
       <DependentUpon>201706190416392_Add_Product_Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706190756592_Update_Product_Table.cs" />
+    <Compile Include="Migrations\201706190756592_Update_Product_Table.Designer.cs">
+      <DependentUpon>201706190756592_Update_Product_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706190810209_Update_Product_Table_V2.cs" />
+    <Compile Include="Migrations\201706190810209_Update_Product_Table_V2.Designer.cs">
+      <DependentUpon>201706190810209_Update_Product_Table_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706190903033_Update_Product_V3.cs" />
+    <Compile Include="Migrations\201706190903033_Update_Product_V3.Designer.cs">
+      <DependentUpon>201706190903033_Update_Product_V3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706191003098_Update_Product_Table_V4.cs" />
+    <Compile Include="Migrations\201706191003098_Update_Product_Table_V4.Designer.cs">
+      <DependentUpon>201706191003098_Update_Product_Table_V4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="AbpZeroTemplateDataModule.cs" />
     <Compile Include="Migrations\Seed\Host\DefaultEditionCreator.cs" />
@@ -580,6 +596,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706190416392_Add_Product_Table.resx">
       <DependentUpon>201706190416392_Add_Product_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706190756592_Update_Product_Table.resx">
+      <DependentUpon>201706190756592_Update_Product_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706190810209_Update_Product_Table_V2.resx">
+      <DependentUpon>201706190810209_Update_Product_Table_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706190903033_Update_Product_V3.resx">
+      <DependentUpon>201706190903033_Update_Product_V3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191003098_Update_Product_Table_V4.resx">
+      <DependentUpon>201706191003098_Update_Product_Table_V4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

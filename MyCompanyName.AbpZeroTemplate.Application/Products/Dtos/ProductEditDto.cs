@@ -24,32 +24,39 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
         ///   主键Id
         /// </summary>
         [DisplayName("主键Id")]
+        public int? Id { get; set; }
+
+
+        /// <summary>
+        /// 产品ID
+        /// </summary>
+        [DisplayName("产品ID")]
         [Required]
-        [MaxLength(128)]
-        public string Id{get;set;}
+        [MaxLength(32)]
+        public string ProductId { get; set; }
 
         /// <summary>
         /// 产品名称
         /// </summary>
         [DisplayName("产品名称")]
         [Required]
-        [MaxLength(128)]
-        public   string  ProductName { get; set; }
+        [MaxLength(32)]
+        public string ProductName { get; set; }
 
         /// <summary>
         /// 产品分类
         /// </summary>
         [DisplayName("产品分类")]
         [Required]
-        [MaxLength(256)]
-        public   string  Classify { get; set; }
+        [MaxLength(64)]
+        public string Classify { get; set; }
 
         /// <summary>
         /// 备注
         /// </summary>
         [DisplayName("备注")]
-        [MaxLength(256)]
-        public   string  Comment { get; set; }
+        [MaxLength(255)]
+        public string Comment { get; set; }
 
         /// <summary>
         /// 业务大类
@@ -57,7 +64,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
         [DisplayName("业务大类")]
         [Required]
         [MaxLength(64)]
-        public   string  BusinessCategory { get; set; }
+        public string BusinessCategory { get; set; }
 
         /// <summary>
         /// 业务类型
@@ -65,7 +72,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
         [DisplayName("业务类型")]
         [Required]
         [MaxLength(64)]
-        public   string  BusinessType { get; set; }
+        public string BusinessType { get; set; }
 
     }
 }

@@ -38,12 +38,14 @@ namespace MyCompanyName.AbpZeroTemplate.Products
 
                 AddHeader(
                     sheet,
+                      L("ProductId"),
                       L("ProductName"),
                       L("Classify"),
                       L("Comment"),
                       L("BusinessCategory"),
                       L("BusinessType"));
                 AddObjects(sheet, 2, productListDtos,
+                    _ => _.ProductId,
                     _ => _.ProductName,
                     _ => _.Classify,
                     _ => _.Comment,

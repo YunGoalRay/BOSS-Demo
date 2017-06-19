@@ -11,12 +11,12 @@ namespace MyCompanyName.AbpZeroTemplate.Products
     /// <summary>
     /// 基础数据产品信息
     /// </summary>
-    public class Product: Entity<string>
+    public class Product: FullAuditedEntity
     {
         /// <summary>
         /// 产品ID
         /// </summary>
-        public override string Id { get; set; }
+        public virtual string ProductId { get; set; }
         /// <summary>
         /// 产品名称
         /// </summary>

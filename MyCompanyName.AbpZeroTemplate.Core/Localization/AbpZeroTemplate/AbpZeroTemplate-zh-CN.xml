@@ -20,6 +20,7 @@
     <text name="DeleteProduct" value="删除基础数据产品信息" />
     <text name="ProductDeleteWarningMessage" value="基础数据产品信息名称: {0} 将被删除,是否确定删除它。" />
     <!--//用于表格展示的数据信息的标题-->
+    <text name="ProductId" value="产品编码" />
     <text name="ProductName" value="产品名称" />
     <text name="Classify" value="产品分类" />
     <text name="Comment" value="备注" />

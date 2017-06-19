@@ -29,21 +29,21 @@ namespace MyCompanyName.AbpZeroTemplate.Web.App.Startup
                     L("BasicData"),
                     icon: "icon-globe"
                     ).AddItem(new MenuItemDefinition(
-                        PageNames.App.BasicData.Product,
+                        PageNames.App.Common.Product,
                         L("BasicData_Product"),
-                        url: "",
+                        url: "products",
                         icon: "icon-grid",
                         requiredPermissionName: ProductAppPermissions.Product
                         )
                     ).AddItem(new MenuItemDefinition(
-                        PageNames.App.BasicData.Client,
+                        PageNames.App.Common.Client,
                         L("BasicData_Client"),
                         url: "",
                         icon: "icon-layers",
                         requiredPermissionName: AppPermissions.Pages_Administration_OrganizationUnits
                         )
                     ).AddItem(new MenuItemDefinition(
-                        PageNames.App.BasicData.Provider,
+                        PageNames.App.Common.Provider,
                         L("BasicData_Provider"),
                         url: "",
                         icon: "icon-layers",

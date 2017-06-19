@@ -8,8 +8,13 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
     /// 基础数据产品信息列表Dto
     /// </summary>
     [AutoMapFrom(typeof(Product))]
-    public class ProductListDto : EntityDto<string>
+    public class ProductListDto : EntityDto<int>
     {
+        /// <summary>
+        /// 产品名称
+        /// </summary>
+        [DisplayName("产品编码")]
+        public string ProductId { get; set; }
         /// <summary>
         /// 产品名称
         /// </summary>
@@ -24,7 +29,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
         /// 备注
         /// </summary>
         [DisplayName("备注")]
-        public      string Comment { get; set; }
+        public string Comment { get; set; }
         /// <summary>
         /// 业务大类
         /// </summary>

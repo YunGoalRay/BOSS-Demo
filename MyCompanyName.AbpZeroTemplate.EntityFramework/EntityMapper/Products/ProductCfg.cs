@@ -19,17 +19,19 @@ namespace MyCompanyName.AbpZeroTemplate.Products.EntityMapper.Products
 		public ProductCfg ()
 		{
 		    ToTable("Product");
- 
-		    // 产品名称
-			Property(a => a.ProductName).HasMaxLength(128);
-		    // 产品分类
-			Property(a => a.Classify).HasMaxLength(256);
-		    // 备注
-			Property(a => a.Comment).HasMaxLength(256);
-		    // 业务大类
-			Property(a => a.BusinessCategory).HasMaxLength(64);
-		    // 业务类型
-			Property(a => a.BusinessType).HasMaxLength(64);
-		}
+
+            // 产品ID
+            Property(a => a.ProductId).HasMaxLength(32);
+            // 产品名称
+            Property(a => a.ProductName).HasMaxLength(32);
+            // 产品分类
+            Property(a => a.Classify).HasMaxLength(64);
+            // 备注
+            Property(a => a.Comment).HasMaxLength(255);
+            // 业务大类
+            Property(a => a.BusinessCategory).HasMaxLength(64);
+            // 业务类型
+            Property(a => a.BusinessType).HasMaxLength(64);
+        }
     }
 }

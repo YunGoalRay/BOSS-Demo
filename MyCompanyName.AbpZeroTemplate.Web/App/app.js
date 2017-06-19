@@ -111,6 +111,14 @@ appModule.config([
             });
         }
 
+        //产品功能路由器
+        if (abp.auth.hasPermission('Pages.Product')) {
+            $stateProvider.state('products', {
+                url: '/products?filterText',
+                templateUrl: '~/App/common/views/products/index.cshtml',
+            });
+        }
+
         $stateProvider.state('notifications', {
             url: '/notifications',
             templateUrl: '~/App/common/views/notifications/index.cshtml'
