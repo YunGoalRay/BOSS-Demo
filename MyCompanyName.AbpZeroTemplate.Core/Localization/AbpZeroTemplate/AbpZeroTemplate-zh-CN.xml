@@ -13,12 +13,12 @@
     <text name="BasicData_Provider" value="供应商" />
 
     <!-- 基础数据产品信息管理 -->
-    <text name="Product" value="基础数据产品信息" />
-    <text name="ProductHeaderInfo" value="基础数据产品信息管理列表" />
-    <text name="CreateProduct" value="新增基础数据产品信息" />
-    <text name="EditProduct" value="编辑基础数据产品信息" />
-    <text name="DeleteProduct" value="删除基础数据产品信息" />
-    <text name="ProductDeleteWarningMessage" value="基础数据产品信息名称: {0} 将被删除,是否确定删除它。" />
+    <text name="Product" value="产品" />
+    <text name="ProductHeaderInfo" value="信息列表" />
+    <text name="CreateProduct" value="新增产品" />
+    <text name="EditProduct" value="编辑产品" />
+    <text name="DeleteProduct" value="删除产品" />
+    <text name="ProductDeleteWarningMessage" value="产品名称: {0} 将被删除,是否确定删除它。" />
     <!--//用于表格展示的数据信息的标题-->
     <text name="ProductId" value="产品编码" />
     <text name="ProductName" value="产品名称" />
@@ -26,6 +26,23 @@
     <text name="Comment" value="备注" />
     <text name="BusinessCategory" value="业务大类" />
     <text name="BusinessType" value="业务类型" />
+
+    <!-- 经销商管理 -->
+    <text name="Provider" value="经销商" />
+    <text name="ProviderHeaderInfo" value="经销商管理列表" />
+    <text name="CreateProvider" value="新增经销商" />
+    <text name="EditProvider" value="编辑经销商" />
+    <text name="DeleteProvider" value="删除经销商" />
+    <text name="ProviderDeleteWarningMessage" value="经销商名称: {0} 将被删除,是否确定删除它。" />
+    <!--//用于表格展示的数据信息的标题-->
+    <text name="ProviderName" value="供应商名称" />
+    <text name="ProviderId" value="供应商编号" />
+    <text name="ShortName" value="简称" />
+    <text name="ProviderType" value="供应商种类" />
+    <text name="Address" value="地址" />
+    <text name="BusinessPhone" value="商务电话" />
+    <text name="BusinessContact" value="商务联系人" />
+    <text name="Owner" value="所有者" />
 
     <text name="SalesManagement" value="销售管理" />
     <text name="SalesManagement_SalesOff" value="销售关帐" />
@@ -317,6 +334,10 @@
     <text name="ThisLanguageAlreadyExists" value="这种语言已经存在!" />
     <text name="Test" value="测试" />
     <text name="Shop" value="商店" />
-    <text name="CategoryManager" value="分类管理" />-
+    <text name="CategoryManager" value="分类管理" />
+    <text name="OrganizationUnits" value="组织管理" />
+    <text name="OrganizationUnitsHeaderInfo" value="使用组织管理人员" />
+    <text name="OrganizationTree" value="组织机构" />
+    <text name="Maintenance">系统维护</text>
   </texts>
 </localizationDictionary>

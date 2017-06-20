@@ -1,28 +1,20 @@
-﻿using Abp.Domain.Entities;
-using Abp.Domain.Entities.Auditing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Abp.Domain.Entities.Auditing;
 
 namespace MyCompanyName.AbpZeroTemplate.Products
 {
-    /// <summary>
-    /// 基础数据产品信息
-    /// </summary>
-    public class Product: FullAuditedEntity
+    public class Product : FullAuditedEntity
     {
         /// <summary>
-        /// 产品ID
+        /// 产品编号
         /// </summary>
         public virtual string ProductId { get; set; }
         /// <summary>
         /// 产品名称
         /// </summary>
         public virtual string ProductName { get; set; }
+        
         /// <summary>
-        /// 产品分类
+        /// 分类
         /// </summary>
         public virtual string Classify { get; set; }
         /// <summary>

@@ -119,6 +119,13 @@ appModule.config([
             });
         }
 
+        if (abp.auth.hasPermission('Pages.Provider')) {
+            $stateProvider.state('providers', {
+                url: '/providers?filterText',
+                templateUrl: '~/App/common/views/providers/index.cshtml',
+            });
+        }
+
         $stateProvider.state('notifications', {
             url: '/notifications',
             templateUrl: '~/App/common/views/notifications/index.cshtml'

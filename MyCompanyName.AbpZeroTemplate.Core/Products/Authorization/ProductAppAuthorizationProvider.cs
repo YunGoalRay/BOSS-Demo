@@ -1,12 +1,11 @@
-﻿  
-using System.Linq;
+﻿using System.Linq;
 using Abp.Authorization;
 using Abp.Localization;
 using MyCompanyName.AbpZeroTemplate.Authorization;
 
 namespace MyCompanyName.AbpZeroTemplate.Products.Authorization
 {
-	/// <summary>
+    /// <summary>
     /// 权限配置都在这里。
     /// 给权限默认设置服务
     /// See <see cref="ProductAppPermissions"/> for all permission names.
@@ -30,8 +29,4 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Authorization
             return new LocalizableString(name, AbpZeroTemplateConsts.LocalizationSourceName);
         }
     }
-
-
-
-
 }

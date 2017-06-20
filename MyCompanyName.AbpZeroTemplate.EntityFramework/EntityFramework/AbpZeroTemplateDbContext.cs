@@ -7,6 +7,8 @@ using MyCompanyName.AbpZeroTemplate.Chat;
 using MyCompanyName.AbpZeroTemplate.Friendships;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy;
 using MyCompanyName.AbpZeroTemplate.Storage;
+using MyCompanyName.AbpZeroTemplate.Providers;
+using MyCompanyName.AbpZeroTemplate.Providers.EntityMapper.Providers;
 using MyCompanyName.AbpZeroTemplate.Products;
 using MyCompanyName.AbpZeroTemplate.Products.EntityMapper.Products;
 
@@ -31,6 +33,8 @@ namespace MyCompanyName.AbpZeroTemplate.EntityFramework
         public virtual IDbSet<ChatMessage> ChatMessages { get; set; }
 
         public virtual IDbSet<Product> Products { get; set; }
+
+        public virtual IDbSet<Provider> Providers { get; set; }
 
         public AbpZeroTemplateDbContext()
             : base("Default")
@@ -59,6 +63,7 @@ namespace MyCompanyName.AbpZeroTemplate.EntityFramework
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new ProductCfg());
+            modelBuilder.Configurations.Add(new ProviderCfg());
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -3,6 +3,7 @@ using Abp.AutoMapper;
 using Abp.Localization;
 using Abp.Modules;
 using MyCompanyName.AbpZeroTemplate.Authorization;
+using MyCompanyName.AbpZeroTemplate.Providers.Authorization;
 using MyCompanyName.AbpZeroTemplate.Products.Authorization;
 
 namespace MyCompanyName.AbpZeroTemplate
@@ -29,6 +30,7 @@ namespace MyCompanyName.AbpZeroTemplate
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
             Configuration.Authorization.Providers.Add<ProductAppAuthorizationProvider>();
+            Configuration.Authorization.Providers.Add<ProviderAppAuthorizationProvider>();
         }
     }
 }

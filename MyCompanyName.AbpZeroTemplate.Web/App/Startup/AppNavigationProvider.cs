@@ -2,6 +2,7 @@
 using Abp.Localization;
 using MyCompanyName.AbpZeroTemplate.Authorization;
 using MyCompanyName.AbpZeroTemplate.Products.Authorization;
+using MyCompanyName.AbpZeroTemplate.Providers.Authorization;
 using MyCompanyName.AbpZeroTemplate.Web.Navigation;
 
 namespace MyCompanyName.AbpZeroTemplate.Web.App.Startup
@@ -45,9 +46,9 @@ namespace MyCompanyName.AbpZeroTemplate.Web.App.Startup
                     ).AddItem(new MenuItemDefinition(
                         PageNames.App.Common.Provider,
                         L("BasicData_Provider"),
-                        url: "",
+                        url: "providers",
                         icon: "icon-layers",
-                        requiredPermissionName: AppPermissions.Pages_Administration_OrganizationUnits
+                        requiredPermissionName: ProviderAppPermissions.Provider
                         )
                     )
                 ).AddItem(new MenuItemDefinition(

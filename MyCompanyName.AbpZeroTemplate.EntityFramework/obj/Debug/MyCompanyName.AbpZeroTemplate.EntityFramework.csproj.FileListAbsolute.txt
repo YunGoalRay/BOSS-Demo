@@ -125,3 +125,6 @@ D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.Abp
 D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.Migrations.Update_Product_Table_V2.resources
 D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.Migrations.Update_Product_V3.resources
 D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.Migrations.Update_Product_Table_V4.resources
+D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.Migrations.Add_Provider_Table.resources
+D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.Migrations.Remove_Product_Table.resources
+D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.EntityFramework\obj\Debug\MyCompanyName.AbpZeroTemplate.Migrations.Add_New_Product_Table.resources

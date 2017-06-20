@@ -488,5 +488,22 @@
     <text name="CreateProduct" value="CreateProduct" />
     <text name="EditProduct" value="EditProduct" />
     <text name="DeleteProduct" value="DeleteProduct" />
+
+    <!-- 经销商english管理 -->
+    <text name="	ProviderHeaderInfo" value="经销商List" />
+    <!--//用于表格展示的数据信息的标题-->
+    <text name="ProviderName" value="供应商名称" />
+    <text name="ProviderId" value="供应商编号" />
+    <text name="ShortName" value="简称" />
+    <text name="ProviderType" value="供应商种类" />
+    <text name="Address" value="地址" />
+    <text name="BusinessPhone" value="商务电话" />
+    <text name="BusinessContact" value="商务联系人" />
+    <text name="Owner" value="所有者" />
+
+    <text name="Provider" value="ManagementProvider" />
+    <text name="CreateProvider" value="CreateProvider" />
+    <text name="EditProvider" value="EditProvider" />
+    <text name="DeleteProvider" value="DeleteProvider" />
   </texts>
 </localizationDictionary>

@@ -192,11 +192,13 @@
     <Compile Include="Notifications\IAppNotifier.cs" />
     <Compile Include="Products\Authorization\ProductAppAuthorizationProvider.cs" />
     <Compile Include="Products\Authorization\ProductAppPermissions.cs" />
-    <Compile Include="Products\IProductRepository.cs" />
     <Compile Include="Products\Product.cs" />
     <Compile Include="Products\ProductManage.cs" />
-    <Compile Include="Products\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\Authorization\ProviderAppAuthorizationProvider.cs" />
+    <Compile Include="Providers\Authorization\ProviderAppPermissions.cs" />
+    <Compile Include="Providers\Provider.cs" />
+    <Compile Include="Providers\ProviderManage.cs" />
     <Compile Include="Storage\Security\PasswordComplexityChecker.cs" />
     <Compile Include="Storage\Security\PasswordComplexitySetting.cs" />
     <Compile Include="Storage\DbBinaryObjectManager.cs" />
@@ -224,7 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-ar.xml" />
-    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-zh-CN.xml" />
+    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-zh-CN.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-de.xml" />
     <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-pt-BR.xml" />
     <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-it.xml" />

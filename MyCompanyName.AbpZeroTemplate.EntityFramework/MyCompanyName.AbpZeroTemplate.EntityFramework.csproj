@@ -145,6 +145,7 @@
     <Compile Include="EntityFramework\Repositories\AbpZeroTemplateRepositoryBase.cs" />
     <Compile Include="EntityFramework\AbpZeroDbMigrator.cs" />
     <Compile Include="EntityMapper\Products\ProductCfg.cs" />
+    <Compile Include="EntityMapper\Providers\ProviderCfg.cs" />
     <Compile Include="Migrations\201501041229232_InitialCreate.cs" />
     <Compile Include="Migrations\201501041229232_InitialCreate.Designer.cs">
       <DependentUpon>201501041229232_InitialCreate.cs</DependentUpon>
@@ -401,6 +402,18 @@
     <Compile Include="Migrations\201706191003098_Update_Product_Table_V4.Designer.cs">
       <DependentUpon>201706191003098_Update_Product_Table_V4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706200341045_Add_Provider_Table.cs" />
+    <Compile Include="Migrations\201706200341045_Add_Provider_Table.Designer.cs">
+      <DependentUpon>201706200341045_Add_Provider_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706200518435_Remove_Product_Table.cs" />
+    <Compile Include="Migrations\201706200518435_Remove_Product_Table.Designer.cs">
+      <DependentUpon>201706200518435_Remove_Product_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706200540594_Add_New_Product_Table.cs" />
+    <Compile Include="Migrations\201706200540594_Add_New_Product_Table.Designer.cs">
+      <DependentUpon>201706200540594_Add_New_Product_Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="AbpZeroTemplateDataModule.cs" />
     <Compile Include="Migrations\Seed\Host\DefaultEditionCreator.cs" />
@@ -608,6 +621,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706191003098_Update_Product_Table_V4.resx">
       <DependentUpon>201706191003098_Update_Product_Table_V4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706200341045_Add_Provider_Table.resx">
+      <DependentUpon>201706200341045_Add_Provider_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706200518435_Remove_Product_Table.resx">
+      <DependentUpon>201706200518435_Remove_Product_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706200540594_Add_New_Product_Table.resx">
+      <DependentUpon>201706200540594_Add_New_Product_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,15 +1,10 @@
-﻿using System;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration;
-using Abp.Application.Services.Dto;
-using Abp.Extensions;
-using MyCompanyName.AbpZeroTemplate.Products;
+﻿using System.Data.Entity.ModelConfiguration;
 
 namespace MyCompanyName.AbpZeroTemplate.Products.EntityMapper.Products
 {
 
-	/// <summary>
-    /// 基础数据产品信息的数据配置文件
+    /// <summary>
+    /// 产品的数据配置文件
     /// </summary>
     public class ProductCfg : EntityTypeConfiguration<Product>
     {
@@ -18,20 +13,20 @@ namespace MyCompanyName.AbpZeroTemplate.Products.EntityMapper.Products
         /// </summary>
 		public ProductCfg ()
 		{
-		    ToTable("Product");
-
-            // 产品ID
-            Property(a => a.ProductId).HasMaxLength(32);
-            // 产品名称
-            Property(a => a.ProductName).HasMaxLength(32);
-            // 产品分类
-            Property(a => a.Classify).HasMaxLength(64);
-            // 备注
-            Property(a => a.Comment).HasMaxLength(255);
-            // 业务大类
-            Property(a => a.BusinessCategory).HasMaxLength(64);
-            // 业务类型
-            Property(a => a.BusinessType).HasMaxLength(64);
-        }
+		    ToTable("Product", AbpZeroTemplateConsts.SchemaName.Basic);
+ 
+		    // 产品编号
+			Property(a => a.ProductId).HasMaxLength(16);
+		    // 产品名称
+			Property(a => a.ProductName).HasMaxLength(32);
+		    // 分类
+			Property(a => a.Classify).HasMaxLength(16);
+		    // 备注
+			Property(a => a.Comment).HasMaxLength(128);
+		    // 业务大类
+			Property(a => a.BusinessCategory).HasMaxLength(16);
+		    // 业务类型
+			Property(a => a.BusinessType).HasMaxLength(16);
+		}
     }
 }

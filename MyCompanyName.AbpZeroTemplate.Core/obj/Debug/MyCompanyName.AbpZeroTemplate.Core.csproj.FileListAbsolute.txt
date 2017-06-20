@@ -42,4 +42,3 @@ D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.Abp
 D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.Core\bin\Debug\System.Collections.Immutable.xml
 D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.Core\obj\Debug\MyCompanyName.AbpZeroTemplate.Core.dll
 D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.Core\obj\Debug\MyCompanyName.AbpZeroTemplate.Core.pdb
-D:\下载源码\开源\AbpZero310-master\AbpZero310-master\src\MyCompanyName.AbpZeroTemplate.Core\obj\Debug\MyCompanyName.AbpZeroTemplate.Core.csprojResolveAssemblyReference.cache

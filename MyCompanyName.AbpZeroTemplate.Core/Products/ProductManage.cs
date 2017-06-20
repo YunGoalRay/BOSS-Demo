@@ -4,7 +4,7 @@ using Abp.Domain.Services;
 namespace MyCompanyName.AbpZeroTemplate.Products
 {
     /// <summary>
-    /// 基础数据产品信息业务管理
+    /// 产品业务管理
     /// </summary>
     public class ProductManage : IDomainService
     {
@@ -19,6 +19,8 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         }
 
         //TODO:编写领域业务代码
+
+
         /// <summary>
         ///     初始化
         /// </summary>

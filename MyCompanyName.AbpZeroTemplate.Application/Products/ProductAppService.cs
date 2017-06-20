@@ -5,7 +5,6 @@ using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
 using MyCompanyName.AbpZeroTemplate.Products.Authorization;
 using MyCompanyName.AbpZeroTemplate.Products.Dtos;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -15,10 +14,10 @@ using System.Threading.Tasks;
 namespace MyCompanyName.AbpZeroTemplate.Products
 {
     /// <summary>
-    /// 基础数据产品信息服务实现
+    /// 产品服务实现
     /// </summary>
     [AbpAuthorize(ProductAppPermissions.Product)]
-    public class ProductAppService : AbpZeroTemplateAppServiceBase,IProductAppService
+    public class ProductAppService : AbpZeroTemplateAppServiceBase, IProductAppService
     {
         private readonly IRepository<Product, int> _productRepository;
 
@@ -27,20 +26,16 @@ namespace MyCompanyName.AbpZeroTemplate.Products
         /// <summary>
         /// 构造方法
         /// </summary>
-        public ProductAppService(IRepository<Product, int> productRepository,
-ProductManage productManage
-
-  )
+        public ProductAppService(IRepository<Product, int> productRepository,ProductManage productManage)
         {
             _productRepository = productRepository;
             _productManage = productManage;
-
         }
 
-        #region 基础数据产品信息管理
+        #region 产品管理
 
         /// <summary>
-        /// 根据查询条件获取基础数据产品信息分页列表
+        /// 根据查询条件获取产品分页列表
         /// </summary>
         public async Task<PagedResultDto<ProductListDto>> GetPagedProductsAsync(GetProductInput input)
         {
@@ -63,7 +58,7 @@ ProductManage productManage
         }
 
         /// <summary>
-        /// 通过Id获取基础数据产品信息信息进行编辑或修改 
+        /// 通过Id获取产品信息进行编辑或修改 
         /// </summary>
         public async Task<GetProductForEditOutput> GetProductForEditAsync(NullableIdDto<int> input)
         {
@@ -87,7 +82,7 @@ ProductManage productManage
 
 
         /// <summary>
-        /// 通过指定id获取基础数据产品信息ListDto信息
+        /// 通过指定id获取产品ListDto信息
         /// </summary>
         public async Task<ProductListDto> GetProductByIdAsync(EntityDto<int> input)
         {
@@ -103,7 +98,7 @@ ProductManage productManage
 
 
         /// <summary>
-        /// 新增或更改基础数据产品信息
+        /// 新增或更改产品
         /// </summary>
         public async Task CreateOrUpdateProductAsync(CreateOrUpdateProductInput input)
         {
@@ -118,7 +113,7 @@ ProductManage productManage
         }
 
         /// <summary>
-        /// 新增基础数据产品信息
+        /// 新增产品
         /// </summary>
         [AbpAuthorize(ProductAppPermissions.Product_CreateProduct)]
         public virtual async Task<ProductEditDto> CreateProductAsync(ProductEditDto input)
@@ -132,7 +127,7 @@ ProductManage productManage
         }
 
         /// <summary>
-        /// 编辑基础数据产品信息
+        /// 编辑产品
         /// </summary>
         [AbpAuthorize(ProductAppPermissions.Product_EditProduct)]
         public virtual async Task UpdateProductAsync(ProductEditDto input)
@@ -146,7 +141,7 @@ ProductManage productManage
         }
 
         /// <summary>
-        /// 删除基础数据产品信息
+        /// 删除产品
         /// </summary>
         [AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
         public async Task DeleteProductAsync(EntityDto<int> input)
@@ -156,7 +151,7 @@ ProductManage productManage
         }
 
         /// <summary>
-        /// 批量删除基础数据产品信息
+        /// 批量删除产品
         /// </summary>
         [AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
         public async Task BatchDeleteProductAsync(List<int> input)
@@ -166,17 +161,5 @@ ProductManage productManage
         }
 
         #endregion
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

@@ -1,5 +1,4 @@
-﻿ 
-namespace MyCompanyName.AbpZeroTemplate.Products.Authorization
+﻿namespace MyCompanyName.AbpZeroTemplate.Products.Authorization
 {
 	 /// <summary>
 	 /// 定义系统的权限名称的字符串常量。
@@ -8,20 +7,20 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Authorization
   public static class ProductAppPermissions
     {
         /// <summary>
-        /// 基础数据产品信息管理权限
+        /// 产品管理权限
         /// </summary>
         public const string Product = "Pages.Product";
 
 		/// <summary>
-        /// 基础数据产品信息创建权限
+        /// 产品创建权限
         /// </summary>
         public const string Product_CreateProduct = "Pages.Product.CreateProduct";
 		/// <summary>
-        /// 基础数据产品信息修改权限
+        /// 产品修改权限
         /// </summary>
         public const string Product_EditProduct = "Pages.Product.EditProduct";
 		/// <summary>
-        /// 基础数据产品信息删除权限
+        /// 产品删除权限
         /// </summary>
         public const string Product_DeleteProduct = "Pages.Product.DeleteProduct";
     }

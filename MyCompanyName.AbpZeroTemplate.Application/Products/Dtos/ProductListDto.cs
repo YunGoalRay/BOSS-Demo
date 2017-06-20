@@ -5,31 +5,26 @@ using System.ComponentModel;
 namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
 {
     /// <summary>
-    /// 基础数据产品信息列表Dto
+    /// 产品列表Dto
     /// </summary>
     [AutoMapFrom(typeof(Product))]
     public class ProductListDto : EntityDto<int>
     {
         /// <summary>
-        /// 产品名称
+        /// 产品编号
         /// </summary>
-        [DisplayName("产品编码")]
-        public string ProductId { get; set; }
+        [DisplayName("产品编号")]
+        public      string ProductId { get; set; }
         /// <summary>
         /// 产品名称
         /// </summary>
         [DisplayName("产品名称")]
         public      string ProductName { get; set; }
         /// <summary>
-        /// 产品分类
+        /// 分类
         /// </summary>
-        [DisplayName("产品分类")]
+        [DisplayName("分类")]
         public      string Classify { get; set; }
-        /// <summary>
-        /// 备注
-        /// </summary>
-        [DisplayName("备注")]
-        public string Comment { get; set; }
         /// <summary>
         /// 业务大类
         /// </summary>

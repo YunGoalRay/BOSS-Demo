@@ -4,7 +4,7 @@ using MyCompanyName.AbpZeroTemplate.Dto;
 namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
 {
     /// <summary>
-    /// 基础数据产品信息查询Dto
+    /// 产品查询Dto
     /// </summary>
     public class GetProductInput : PagedAndSortedInputDto, IShouldNormalize
     {
@@ -21,7 +21,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
         public void Normalize()
         {
             if (string.IsNullOrEmpty(Sorting))
-            {		
+            {
                 Sorting = "Id";
             }
         }

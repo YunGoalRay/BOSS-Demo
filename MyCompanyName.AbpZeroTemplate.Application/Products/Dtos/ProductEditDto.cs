@@ -1,23 +1,14 @@
-﻿
-// 项目展示地址:"http://www.ddxc.org/"
-// 如果你有什么好的建议或者觉得可以加什么功能，请加QQ群：104390185大家交流沟通
-// 项目展示地址:"http://www.yoyocms.com/"
-//博客地址：http://www.cnblogs.com/wer-ltm/
-//代码生成器帮助文档：http://www.cnblogs.com/wer-ltm/p/5777190.html
-// <Author-作者>角落的白板笔</Author-作者>
-// Copyright © YoYoCms@中国.2017-06-16T18:32:49. All Rights Reserved.
-//<生成时间>2017-06-16T18:32:49</生成时间>
-using Abp.AutoMapper;
+﻿using Abp.AutoMapper;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
 {
     /// <summary>
-    /// 基础数据产品信息编辑用Dto
+    /// 产品编辑用Dto
     /// </summary>
     [AutoMap(typeof(Product))]
-    public class ProductEditDto 
+    public class ProductEditDto
     {
 
         /// <summary>
@@ -26,13 +17,12 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
         [DisplayName("主键Id")]
         public int? Id { get; set; }
 
-
         /// <summary>
-        /// 产品ID
+        /// 产品编号
         /// </summary>
-        [DisplayName("产品ID")]
+        [DisplayName("产品编号")]
         [Required]
-        [MaxLength(32)]
+        [MaxLength(16)]
         public string ProductId { get; set; }
 
         /// <summary>
@@ -44,18 +34,18 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
         public string ProductName { get; set; }
 
         /// <summary>
-        /// 产品分类
+        /// 分类
         /// </summary>
-        [DisplayName("产品分类")]
+        [DisplayName("分类")]
         [Required]
-        [MaxLength(64)]
+        [MaxLength(16)]
         public string Classify { get; set; }
 
         /// <summary>
         /// 备注
         /// </summary>
         [DisplayName("备注")]
-        [MaxLength(255)]
+        [MaxLength(128)]
         public string Comment { get; set; }
 
         /// <summary>
@@ -63,7 +53,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
         /// </summary>
         [DisplayName("业务大类")]
         [Required]
-        [MaxLength(64)]
+        [MaxLength(16)]
         public string BusinessCategory { get; set; }
 
         /// <summary>
@@ -71,7 +61,7 @@ namespace MyCompanyName.AbpZeroTemplate.Products.Dtos
         /// </summary>
         [DisplayName("业务类型")]
         [Required]
-        [MaxLength(64)]
+        [MaxLength(16)]
         public string BusinessType { get; set; }
 
     }
